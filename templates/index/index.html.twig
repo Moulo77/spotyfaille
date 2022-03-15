@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+    {% for musique in musiques %}
+        <figure>
+            <audio controls>
+                <source src="{{ asset('uploads/musiques/' ~musique.son) }}" type="audio/mpeg">
+            </audio>
+            <figcaption>{{ musique.titre }}</figcaption>
+        </figure>
+    {% endfor %}
+{% endblock %}
