@@ -1,0 +1,21 @@
+.formconnexion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formconnexion form{
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formconnexion input{
+    margin-bottom: 40px;
+}
+
+.formconnexion button{
+    width: 8em;
+    margin-bottom: 30px;
+}

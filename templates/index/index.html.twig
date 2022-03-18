@@ -2,13 +2,14 @@
 
 {% block title %}Homepage{% endblock %}
 
+
 {% block body %}
     {% for musique in musiques %}
-        <figure>
-            <audio controls>
+        <figure class="figureaudio">
+            <figcaption class="titreson">{{ musique.titre }} <a href="{{ path('like', {'id': musique.id}) }}"><3</a> / <a href="{{ path('artiste',{'artiste': musique.artiste}) }}">{{ musique.artiste }}</a></figcaption>
+            <audio controls class="musique" id="{{ musique.id }}">
                 <source src="{{ asset('uploads/musiques/' ~musique.son) }}" type="audio/mpeg">
             </audio>
-            <figcaption>{{ musique.titre }}</figcaption>
         </figure>
     {% endfor %}
 {% endblock %}

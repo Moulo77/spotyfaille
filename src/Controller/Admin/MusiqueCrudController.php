@@ -24,7 +24,7 @@ class MusiqueCrudController extends AbstractCrudController
             TextField::new('titre'),
             TextField::new('fichierSon')->setFormType(VichFileType::class)->hideOnIndex(),
             Field::new('son')->setTemplatePath('/uploads/musiques')->hideWhenCreating()->hideOnIndex()->hideWhenUpdating(),
-            AssociationField::new('artiste')->setCrudController(ArtisteCrudController::getEntityFqcn()),
+            AssociationField::new('artiste')->autocomplete(),
             AssociationField::new('style')->autocomplete(),
         ];
     }

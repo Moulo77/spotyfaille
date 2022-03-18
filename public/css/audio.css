@@ -1,0 +1,19 @@
+.figureaudio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.musique{
+    width: 95%;
+    background: #1DB954;
+}
+
+.titreson{
+    margin-bottom: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+}

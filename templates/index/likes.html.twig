@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vos titres likés{% endblock %}
+
+
+{% block body %}
+    {% for musique in likes %}
+        <figure class="figureaudio">
+            <figcaption class="titreson">{{ musique.titre }}<a href="{{ path('dislike', {'id': musique.id}) }}">< 3</a> </figcaption>
+            <audio controls class="musique" id="{{ musique.id }}">
+                <source src="{{ asset('uploads/musiques/' ~musique.son) }}" type="audio/mpeg">
+            </audio>
+        </figure>
+    {% endfor %}
+{% endblock %}
